@@ -1,0 +1,96 @@
+
+# oracle
+
+-   [Cloud](http://192.168.0.2:82/en/cloud/)
+-   [Applications](http://192.168.0.2:82/en/applications/)
+-   [Middleware](http://192.168.0.2:82/en/middleware/)
+-   [Database](http://192.168.0.2:82/en/database/)
+-   [Big Data](http://192.168.0.2:82/en/bigdata/)
+-   [Enterprise Manager](http://192.168.0.2:82/en/enterprise-manager/)
+-   [Engineered Systems](http://192.168.0.2:82/en/engineered-systems/)
+-   [Java](http://192.168.0.2:82/en/java/)
+
+    - Java Language and Virtual Machine Specifications Java语言和虚拟机规范 [/javase/specs/index.html](http://192.168.0.2:82/javase/specs/index.html)
+        - The Java Language Specification, Java SE 11 Edition Java语言规范，Java SE 11 Edition [/javase/specs/jls/se11/html/index.html](http://192.168.0.2:82/javase/specs/jls/se11/html/index.html)
+        - The Java Virtual Machine Specification, Java SE 11 Edition Java虚拟机规范，Java SE 11 Edition [/javase/specs/jvms/se11/html/index.html](http://192.168.0.2:82/javase/specs/jvms/se11/html/index.html)
+        - The Java Language Specification, Java SE 8 Edition Java语言规范，Java SE 8版 [/javase/specs/jls/se8/html/index.html](http://192.168.0.2:82/javase/specs/jls/se8/html/index.html)
+        - The Java Virtual Machine Specification, Java SE 8 Edition Java虚拟机规范，Java SE 8 Edition [/javase/specs/jvms/se8/html/index.html](http://192.168.0.2:82/javase/specs/jvms/se8/html/index.html)
+        - ...
+
+    -   JDK 11文档[/en/java/javase/11/](http://192.168.0.2:82/en/java/javase/11/)    
+        - API Documentation API文档[/en/java/javase/11/docs/api/index.html](http://192.168.0.2:82/en/java/javase/11/docs/api/index.html)
+        - Specifications 产品规格
+            - JAR[/en/java/javase/11/docs/specs/jar/jar.html](http://192.168.0.2:82/en/java/javase/11/docs/specs/jar/jar.html)
+            - Java Native Interface (JNI) Java本机接口（JNI）[/en/java/javase/11/docs/specs/jni/index.html](http://192.168.0.2:82/en/java/javase/11/docs/specs/jni/index.html)
+            - JVM Tool Interface (JVM TI) JVM工具接口（JVM TI）[/en/java/javase/11/docs/specs/jvmti.html](http://192.168.0.2:82/en/java/javase/11/docs/specs/jvmti.html)
+            - Serialization 序列化[/en/java/javase/11/docs/specs/serialization/index.html](http://192.168.0.2:82/en/java/javase/11/docs/specs/serialization/index.html)
+
+        - books 图书
+            - Migration Guide 迁移指南 [/en/java/javase/11/migrate/index.html](http://192.168.0.2:82/en/java/javase/11/migrate/index.html)
+            -   Installation Guide 安装指南 [/en/java/javase/11/install/index.html](http://192.168.0.2:82/en/java/javase/11/install/index.html)
+            -  **Core Libraries 核心库**
+            - Internationalization Guide  国际化指南  [/en/java/javase/11/intl/index.html](http://192.168.0.2:82/en/java/javase/11/intl/index.html)
+            - Java Core Libraries Developer Guide  Java核心库开发人员指南  [/en/java/javase/11/core/index.html](http://192.168.0.2:82/en/java/javase/11/core/index.html)
+            - Java Remote Method Invocation API Guide Java远程方法调用API指南 [/en/java/javase/11/rmi/index.html](http://192.168.0.2:82/en/java/javase/11/rmi/index.html)
+            - **HotSpot Virtual Machine** 
+            - HotSpot Virtual Machine Garbage Collection Tuning Guide HotSpot虚拟机垃圾收集调整指南[/en/java/javase/11/gctuning/index.html](http://192.168.0.2:82/en/java/javase/11/gctuning/index.html)
+            - Java Virtual Machine Guide Java虚拟机指南 [/en/java/javase/11/vm/index.html](http://192.168.0.2:82/en/java/javase/11/vm/index.html)
+            - JRockit to HotSpot Migration Guide JRockit到HotSpot迁移指南[/en/java/javase/11/jrockit-hotspot/index.html](http://192.168.0.2:82/en/java/javase/11/jrockit-hotspot/index.html)
+            - **Language**
+            - Java SE Language Updates Java SE语言更新[/en/java/javase/11/language/index.html](http://192.168.0.2:82/en/java/javase/11/language/index.html)
+            - **Management**
+            - Java Management Extensions Guide Java管理扩展指南 [/en/java/javase/11/jmx/index.html](http://192.168.0.2:82/en/java/javase/11/jmx/index.html)
+            - Java SE Monitoring and Management Guide Java SE监控和管理指南[/en/java/javase/11/management/index.html](http://192.168.0.2:82/en/java/javase/11/management/index.html)
+            - **Scripting**
+            - Java Scripting Programmer’s Guide Java脚本编程程序员指南[/en/java/javase/11/scripting/index.html](http://192.168.0.2:82/en/java/javase/11/scripting/index.html)
+            - Nashorn User's Guide Nashorn用户指南 [/en/java/javase/11/nashorn/index.html](http://192.168.0.2:82/en/java/javase/11/nashorn/index.html)
+            - **Security**
+            - Security Developer Guide 安全开发者指南 [/en/java/javase/11/security/index.html](http://192.168.0.2:82/en/java/javase/11/security/index.html)
+            - **Tools**
+            - Java Shell User Guide Java Shell用户指南 [/en/java/javase/11/jshell/index.html](http://192.168.0.2:82/en/java/javase/11/jshell/index.html)
+            - Javadoc Guide Javadoc指南 [/en/java/javase/11/javadoc/index.html](http://192.168.0.2:82/en/java/javase/11/javadoc/index.html)
+            - Tools Reference 工具参考 [/en/java/javase/11/tools/index.html](http://192.168.0.2:82/en/java/javase/11/tools/index.html)
+            - **Troubleshooting**
+            - Troubleshooting Guide 故障排除指南[/en/java/javase/11/troubleshoot/index.html](http://192.168.0.2:82/en/java/javase/11/troubleshoot/index.html)
+            - **Accessibility**
+            - Java Accessibility Guide Java辅助功能指南[/en/java/javase/11/access/index.html](http://192.168.0.2:82/en/java/javase/11/access/index.html)
+
+
+    - The Java™ Tutorials Java™教程 [/javase/tutorial/tutorialLearningPaths.html](http://192.168.0.2:82/javase/tutorial/tutorialLearningPaths.html)
+        - **New To Java 新到Java**
+            - Getting Started 入门 [/javase/tutorial/getStarted/index.html](http://192.168.0.2:82/javase/tutorial/getStarted/index.html)
+            - Learning the Java Language 学习Java语言[/javase/tutorial/java/index.html](http://192.168.0.2:82/javase/tutorial/java/index.html)
+            - Essential Java Classes 基本Java类[/javase/tutorial/essential/index.html](http://192.168.0.2:82/javase/tutorial/essential/index.html) 
+        - **Building On The Foundation 建立在基础上**
+            - Collections 集合   [/javase/tutorial/collections/index.html](http://192.168.0.2:82/javase/tutorial/collections/index.html)                
+            - Lambda Expressions Lambda表达式             [/javase/tutorial/java/javaOO/lambdaexpressions.html](http://192.168.0.2:82/javase/tutorial/java/javaOO/lambdaexpressions.html)
+            - Aggregate Operations 聚合操作    [/javase/tutorial/collections/streams/index.html](http://192.168.0.2:82/javase/tutorial/collections/streams/index.html)       
+            - Packaging Programs In JAR Files JAR文件中的打包程序 [/javase/tutorial/deployment/jar/index.html](http://192.168.0.2:82/javase/tutorial/deployment/jar/index.html)
+            - Internationalization 国际化           [/javase/tutorial/i18n/index.html](http://192.168.0.2:82/javase/tutorial/i18n/index.html)
+            - Reflection    反射                 [/javase/tutorial/reflect/index.html](http://192.168.0.2:82/javase/tutorial/reflect/index.html)
+            - Security   安全性                    [/javase/tutorial/security/index.html](http://192.168.0.2:82/javase/tutorial/security/index.html)
+            - JavaBeans  JavaBeans                    [/javase/tutorial/javabeans/index.html](http://192.168.0.2:82/javase/tutorial/javabeans/index.html)
+            - The Extension Mechanism 扩展机制        [/javase/tutorial/ext/index.html](http://192.168.0.2:82/javase/tutorial/ext/index.html)
+            - Generics   泛型  [/javase/tutorial/extra/generics/index.html](http://192.168.0.2:82/javase/tutorial/extra/generics/index.html)                 
+        - **Cherish the Client? 珍惜客户？**
+            - Get Started with JavaFX   JavaFX入门 [/javase/8/javafx/get-started-tutorial/get_start_apps.htm](http://192.168.0.2:82/javase/8/javafx/get-started-tutorial/get_start_apps.htm)        
+            - Get Started with Scene Builder  Scene Builder入门   [/javase/8/scene-builder-2/get-started-tutorial/jfxsb-get_started.htm](http://192.168.0.2:82/javase/8/scene-builder-2/get-started-tutorial/jfxsb-get_started.htm)
+            - Creating a GUI with Swing  使用Swing创建GUI         [/javase/tutorial/uiswing/index.html](http://192.168.0.2:82/javase/tutorial/uiswing/index.html)
+            - Deployment      部署                   [/javase/tutorial/deployment/index.html](http://192.168.0.2:82/javase/tutorial/deployment/index.html)
+            - 2D Graphics   2D图形                    [/javase/tutorial/2d/index.html](http://192.168.0.2:82/javase/tutorial/2d/index.html)
+            - Full-Screen Exclusive Mode API  全屏独占模式API   [/javase/tutorial/extra/fullscreen/index.html](http://192.168.0.2:82/javase/tutorial/extra/fullscreen/index.html) 
+        - **Fervor Over Server! 热情服务器！**
+            - JDBC Database Access JDBC数据库访问 [/javase/tutorial/jdbc/index.html](http://192.168.0.2:82/javase/tutorial/jdbc/index.html)
+            - JMX      [/javase/tutorial/jmx/index.html](http://192.168.0.2:82/javase/tutorial/jmx/index.html)
+            - JNDI     [/javase/tutorial/jndi/index.html](http://192.168.0.2:82/javase/tutorial/jndi/index.html)
+            - JAXP                [/javase/tutorial/jaxp/index.html](http://192.168.0.2:82/javase/tutorial/jaxp/index.html)
+            - RMI   [/javase/tutorial/rmi/index.html](http://192.168.0.2:82/javase/tutorial/rmi/index.html)             
+            - Concurrency    并发    [/javase/tutorial/essential/concurrency/index.html](http://192.168.0.2:82/javase/tutorial/essential/concurrency/index.html) 
+
+-   [Servers](http://192.168.0.2:82/en/servers/)
+-   [Networking](http://192.168.0.2:82/en/networking/)
+-   [Virtualization](http://192.168.0.2:82/en/virtualization/)
+-   [Storage](http://192.168.0.2:82/en/storage/)
+-   [Operating Systems](http://192.168.0.2:82/en/operating-systems/)
+-   [Industries](http://192.168.0.2:82/en/industries/)
+-   [Browse All Products](http://192.168.0.2:82/en/browseall.html)
