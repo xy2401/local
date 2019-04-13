@@ -3,6 +3,14 @@
 
 
 
+local.map 独立端口部分映射
+local.html 将远程地址映射为本地地址
+
+    include  _xy2401_local.conf;
+
+sudo cp xy2401_local.conf /etc/nginx/_xy2401_local.conf
+
+
 
 # local
 
