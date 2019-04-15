@@ -26,16 +26,29 @@ do
     #echo context${context[1]} 
     #echo ${stringarray[0]},${context[1]},${stringarray[1]} 
     ## 加上相对路径 [text](url) --> 替换为 [text](../context/url)  但是不要替换 https: 完整单词后面需要紧跟空格或者斜杠或者点
-   cat  ${stringarray[0]} | sed -r "s#\]\((\w*)([ /.]+)#\]\(\.\.\/${context[1]}\/\1\2#g" >  "${stringarray[1]}" 
+    cat  ${stringarray[0]} | sed -r "s#\]\((\w*)([ /.]+)#\]\(\.\.\/${context[1]}\/\1\2#g" >  "${stringarray[1]}" 
 done < _file_list.txt
 
 ## 将 markdown 文件 转换成 html 文件
 find ./ -iname "*.md" -type f -exec sh -c 'pandoc "${0}"  -s  --from markdown --to html5 -o "${0%.md}.html"' {} \; 
+ 
+##将由其他目录拷贝过来的 md 文件 超链接 替换为本地的html 
+while read line
+do 
+    ##如果是空行则跳过
+    [[ -z "${line// }" ]] && continue 
+    #echo $line
+    stringarray=( $line )
+    sed -i "s#${stringarray[0]}#${stringarray[1]%.md}.html#g"  *.html
+done < _file_list.txt
+
+#href="status.md"
+sed -i -r  "s#href=\"(\w*)\.md\"#href=\"\1.html\"#g" *.html
 
 #  nginx配置文件
-cat _xy2401_local.conf >  xy2401_local.conf 
-sed -i "s#xy2401_local_listen#$xy2401_local_listen#g" xy2401_local.conf 
-sed -i "s#xy2401_local_root#$xy2401_local_root/#g" xy2401_local.conf 
+cat _xy2401_server.conf >  xy2401_local.conf 
+sed -i "s#xy2401_local_server_listen#$xy2401_local_listen#g" xy2401_local.conf 
+sed -i "s#xy2401_local_server_root#$xy2401_local_root/#g" xy2401_local.conf 
 ##创建独立域名的端口配置ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
 while read line
 do 

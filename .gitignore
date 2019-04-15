@@ -6,4 +6,5 @@
 !_xy2401_local.conf
 !_xy2401_server.conf
 !_build.sh
-
+!_status.sh
+!status.md
