@@ -4,3 +4,5 @@
 !status.md
 !script/
 !script/*
+script/default-apache.conf.target
+script/default-nginx.conf.target

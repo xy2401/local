@@ -62,22 +62,22 @@ do
     ##追加独立端口配置
 
    ## 拷贝文件 方便直接 修改临时文件
-   cp nginx-default.conf nginx-default.conf.tmp 
-   cp apache-default.conf apache-default.conf.tmp 
+   cp default-nginx.conf default-nginx.conf.tmp 
+   cp default-apache.conf default-apache.conf.tmp 
    # 如果有原始域名 则替换为本地地址
    #sub_filter '#sub_filter_string' '#sub_filter_replacement';##文本替换
     if [[  ${stringarray[3]} =~ [^[:space:]] ]] ; then
        echo "|${stringarray[3]}|"
-       sed -i "s#\#sub_filter_replacement#http://${xy2401_local_ip}:${stringarray[1]}#g" nginx-default.conf.tmp ;
-       sed -i "s#\#sub_filter_string#${stringarray[3]}#g" nginx-default.conf.tmp  ;
-       sed -i "s#\#sub_filter#sub_filter#g" nginx-default.conf.tmp   ;
+       sed -i "s#\#sub_filter_replacement#http://${xy2401_local_ip}:${stringarray[1]}#g" default-nginx.conf.tmp ;
+       sed -i "s#\#sub_filter_string#${stringarray[3]}#g" default-nginx.conf.tmp  ;
+       sed -i "s#\#sub_filter#sub_filter#g" default-nginx.conf.tmp   ;
     fi
     
     #如果目录中存在 .htaccess 文件 则 启动 htaccess 配置
     #echo "${xy2401_local_root}/${stringarray[0]}/.htaccess"
     #if [ -f "${xy2401_local_root}/${stringarray[0]}/.htaccess" ]; then
-    #   sed -i "s#\.htacces#${xy2401_local_root}/${stringarray[0]}/.htaccess#g" nginx-default.conf.tmp  ;
-    #   sed -i "s#\#include#include#g" nginx-default.conf.tmp   ;
+    #   sed -i "s#\.htacces#${xy2401_local_root}/${stringarray[0]}/.htaccess#g" default-nginx.conf.tmp  ;
+    #   sed -i "s#\#include#include#g" default-nginx.conf.tmp   ;
     #fi
 
     #添加防火墙
@@ -87,15 +87,15 @@ do
 
 
 
-    cat nginx-default.conf.tmp | \
+    cat default-nginx.conf.tmp | \
     sed  "s#xy2401_local_server_listen#${stringarray[1]}#g" | \
     sed  "s#xy2401_local_server_root#${xy2401_local_root}/${stringarray[0]}/#g" \
-    >> nginx-default.conf.target
+    >> default-nginx.conf.target
 
-    cat apache-default.conf.tmp  | \
+    cat default-apache.conf.tmp  | \
     sed  "s#xy2401_local_server_listen#${stringarray[1]}#g" | \
     sed  "s#xy2401_local_server_root#${xy2401_local_root}/${stringarray[0]}/#g" \
-    >> apache-default.conf.target
+    >> default-apache.conf.target
 
    #生成的html将域名替换为本地ip
    sed -i "s#${stringarray[2]}#http://${xy2401_local_ip}:${stringarray[1]}#g"  *.html
@@ -104,14 +104,14 @@ do
 done < domain_list.txt
 
 #删除临时文件
-rm nginx-default.conf.tmp 
-rm apache-default.conf.tmp 
+rm default-nginx.conf.tmp 
+rm default-apache.conf.tmp 
   
 
  ##重启防火墙 
  #firewall-cmd --reload
  
-#cp nginx-default.conf.target /etc/nginx/local.conf
+#cp default-nginx.conf.target /etc/nginx/local.conf
 ## 停止并且启动 没有启动的时候不能 reload 
 #nginx -s stop
 #nginx
@@ -122,9 +122,9 @@ rm apache-default.conf.tmp
 
 ## apache 配置
 ## Ubuntu
-[[ -d "/etc/apache2/sites-enabled/" ]] && cp apache-default.conf.target /etc/apache2/sites-enabled/local.conf
+[[ -d "/etc/apache2/sites-enabled/" ]] && cp default-apache.conf.target /etc/apache2/sites-enabled/local.conf
 ## fedora
-[[ -d "/etc/httpd/conf.d" ]] && cp apache-default.conf.target /etc/httpd/conf.d/local.conf
+[[ -d "/etc/httpd/conf.d" ]] && cp default-apache.conf.target /etc/httpd/conf.d/local.conf
 
 #apachectl stop
 #apachectl start
