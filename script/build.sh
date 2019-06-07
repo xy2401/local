@@ -49,7 +49,7 @@ do
     [[ -z "${line// }" ]] && continue 
     #echo $line
     stringarray=( $line )
-    sed -i "s#${stringarray[0]}#${stringarray[1]%.md}.html#g"  ${xy2401_local_local_root}/*.html
+    sed -i "s#../${stringarray[0]}#${stringarray[1]%.md}.html#g"  ${xy2401_local_local_root}/*.html
 done < readme_list.txt
  
 #href="status.md"

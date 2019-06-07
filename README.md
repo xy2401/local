@@ -9,15 +9,23 @@
 
 - [xy2401/local-web-util: 本地web工具](../local-web-util)
  
-[help-jetbrains](../local-doc-help-jetbrains.com/README.md)
+
   
 # local static 
 
 本地静态站点
 
-- [javase 6 API 开发人员文档](../local-doc-jdk-6-docs-cn/README.md)
+- `本地文档集合`[local-docs/README.md](../local-docs/README.md)
+- `jdk 文档`[local-doc-java-api//README.md](../local-doc-java-api/README.md)
+- `jetbrains 系列软件文档`[local-doc-help-jetbrains.com/README.md](../local-doc-help-jetbrains.com/README.md)
+- `eclipse 帮助文档`[local-doc-help-jetbrains.com/README.md](../local-doc-help.eclipse.org/README.md)
+- `本地软件推荐`[local-software/README.md](../local-software/README.md)
+- `本地电子书`[local-doc-books/README.md](../local-doc-books/README.md)
+- `本地镜像`[local-mirror/README.md](../local-mirror/README.md)
+    - `apache镜像`[local-mirror/apache.md](../local-mirror/apache.mdd)
 
-visit [page](https://xy2401.github.io/local-doc-jdk-6-docs-cn/api/)
+ 
+
 
 # local server
 
@@ -32,13 +40,5 @@ visit [page](https://xy2401.github.io/local-doc-jdk-6-docs-cn/api/)
 
 
 - [xy2401/local-doc-free-book: 一些免费的电纸书 方便查阅](../local-doc-free-book)
-
- 
-- javase 6 API 开发人员文档 
-[xy2401/local-doc-jdk-6-docs-cn](../local-doc-jdk-6-docs-cn)
-visit [page](https://xy2401.github.io/local-doc-jdk-6-docs-cn/api/)
-
-
-
 
 
