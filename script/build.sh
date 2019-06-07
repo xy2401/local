@@ -30,7 +30,6 @@ do
     #echo context${context[1]} 
     #echo ${stringarray[0]},${context[1]},${stringarray[1]} 
 
-
    #拷贝文件到本项目中
    cp ${xy2401_local_root}/${stringarray[0]} ${xy2401_local_local_root}/${stringarray[1]}
    #修改文件相对地址
@@ -39,7 +38,7 @@ do
     #cat  ${stringarray[0]} | sed -r "s#\]\((\w*)([ /.]+)#\]\(\.\.\/${context[0]}\/\1\2#g" >  "${stringarray[1]}"
 
 done < readme_list.txt
-
+ 
 ## 将 markdown 文件 转换成 html 文件
 find ${xy2401_local_local_root} -iname "*.md" -type f -exec sh -c 'pandoc "${0}"  -s  --from markdown --to html5 -o "${0%.md}.html"' {} \; 
  
@@ -52,11 +51,10 @@ do
     stringarray=( $line )
     sed -i "s#${stringarray[0]}#${stringarray[1]%.md}.html#g"  ${xy2401_local_local_root}/*.html
 done < readme_list.txt
-
+ 
 #href="status.md"
 sed -i -r  "s#href=\"(\w*)\.md\"#href=\"\1.html\"#g" ${xy2401_local_local_root}/*.html
-
-
+ 
 ##创建独立域名的端口配置ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
 while read line
 do 
@@ -105,7 +103,7 @@ do
     >> default-apache.conf.target
 
    #生成的html将域名替换为本地ip
-   sed -i "s#${stringarray[2]}#http://${xy2401_local_ip}:${stringarray[1]}#g"  *.html
+   sed -i "s#${stringarray[2]}#http://${xy2401_local_ip}:${stringarray[1]}#g"  ${xy2401_local_local_root}/*.html
  
 
 done < domain_list.txt
