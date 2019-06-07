@@ -1,0 +1,39 @@
+# #号开头为注释  文件路径 端口 替换url 原始域名(替换)
+
+./ 2401 https://xy2401.com/local/
+
+local-doc-help-jetbrains.com 2402 https://help-jetbrains.xy2401.com
+
+#[Apache GitBox Repositories](https://gitbox.apache.org/repos/asf)
+local-mirror/mirror/apache-site-git/accumulo-website 2500 https://gitbox.apache.org/repos/asf/accumulo-website
+local-mirror/mirror/apache-site-git/activemq-website/content 2501 https://gitbox.apache.org/repos/asf/activemq-website
+local-mirror/mirror/apache-site-git/incubator-dubbo-website 2502 https://gitbox.apache.org/repos/asf/incubator-dubbo-website
+local-mirror/mirror/apache-site-git/incubator-zipkin-website 2503 https://gitbox.apache.org/repos/asf/incubator-zipkin-website
+local-mirror/mirror/apache-site-git/kafka-site 2504 https://gitbox.apache.org/repos/asf/kafka-site
+local-mirror/mirror/apache-site-git/spark-website/site 2505 https://gitbox.apache.org/repos/asf/spark-website
+local-mirror/mirror/apache-site-git/storm-site/content 2506 https://gitbox.apache.org/repos/asf/storm-site
+local-mirror/mirror/apache-site-git/struts-site/content 2507 https://gitbox.apache.org/repos/asf/struts-site
+local-mirror/mirror/apache-site-git/incubator-shardingsphere-doc 2508 https://gitbox.apache.org/repos/asf/incubator-shardingsphere-doc https://shardingsphere.apache.org
+local-mirror/mirror/apache-site-git/incubator-echarts-website 2509 https://gitbox.apache.org/repos/asf/incubator-echarts-website
+
+
+local-mirror/mirror/apache-websites/cxf/content 2600 https://svn.apache.org/repos/infra/websites/production/cxf
+local-mirror/mirror/apache-websites/db/content 2601 https://svn.apache.org/repos/infra/websites/production/db
+local-mirror/mirror/apache-websites/hive/content 2602 https://svn.apache.org/repos/infra/websites/production/hive
+local-mirror/mirror/apache-websites/httpd/content 2603 https://svn.apache.org/repos/infra/websites/production/httpd
+local-mirror/mirror/apache-websites/lucene/content 2604 https://svn.apache.org/repos/infra/websites/production/lucene
+local-mirror/mirror/apache-websites/logging/content 2608 https://svn.apache.org/repos/infra/websites/production/logging
+local-mirror/mirror/apache-websites/maven/content 2609 https://svn.apache.org/repos/infra/websites/production/maven-content
+local-mirror/mirror/apache-websites/maven/components 2610 https://svn.apache.org/repos/infra/websites/production/maven-components
+local-mirror/mirror/apache-websites/sqoop/content 2611 https://svn.apache.org/repos/infra/websites/production/sqoop
+local-mirror/mirror/apache-websites/www/content 2612 https://svn.apache.org/repos/infra/websites/production/www
+local-mirror/mirror/apache-websites/zookeeper/content 2613 https://svn.apache.org/repos/infra/websites/production/zookeeper
+#local-mirror/mirror/apache-websites/hive/content 2606 https://svn.apache.org/repos/infra/websites/production/hive
+
+local-mirror/mirror/apache-websites2/beam 2700 https://svn.apache.org/repos/asf/beam
+local-mirror/mirror/apache-websites2/httpcomponents 2702 https://svn.apache.org/repos/asf/httpcomponents
+local-mirror/mirror/apache-websites2/jmeter 2703 https://svn.apache.org/repos/asf/jmeter
+local-mirror/mirror/apache-websites2/poi 2704 https://svn.apache.org/repos/asf/poi
+
+ 
+

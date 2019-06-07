@@ -1,10 +1,6 @@
 *
 !.gitignore
 !README.md
-!_domain_list.txt
-!_file_list.txt
-!_xy2401_local.conf
-!_xy2401_server.conf
-!_build.sh
-!_status.sh
 !status.md
+!script/
+!script/*

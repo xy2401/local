@@ -1,6 +1,10 @@
 #!/bin/bash
 
+
+
 echo -e "Generated on `date`\n\n\n\n" > status.md
+
+
 
 
 ## 生成同级目录列表和大小
