@@ -4,8 +4,8 @@
 xy2401_local_listen=1401
 ##获取 当前路径 和 父路径  
 xy2401_local=`pwd`
-xy2401_local_root=$(dirname `pwd`)
-xy2401_local_root=$(dirname $xy2401_local_root)
+xy2401_local_local_root=$(dirname `pwd`)  ## local项目根目录
+xy2401_local_root=$(dirname $xy2401_local_local_root) ## local系列根目录
  
 #echo $xy2401_local_root
 
@@ -25,16 +25,23 @@ do
     #echo $line
     stringarray=( $line ) #空格切割字符串 bash 的方法
     #echo ${stringarray[0]}${stringarray[1]}
-    ##获取相关项目路径 将 / 替换为 空格 然后 获取 第二个字符串即 目录
+    ##获取相关项目路径 将 / 替换为 空格 然后 获取 第一个字符串即 目录
     context=($(echo $line | tr "/" " "))
     #echo context${context[1]} 
     #echo ${stringarray[0]},${context[1]},${stringarray[1]} 
+
+
+   #拷贝文件到本项目中
+   cp ${xy2401_local_root}/${stringarray[0]} ${xy2401_local_local_root}/${stringarray[1]}
+   #修改文件相对地址
+   sed -r -i "s#\]\((\w*)([ /.]+)#\]\(\.\.\/${context[0]}\/\1\2#g"  ${xy2401_local_local_root}/${stringarray[1]}
     ## 加上相对路径 [text](url) --> 替换为 [text](../context/url)  但是不要替换 https: 完整单词后面需要紧跟空格或者斜杠或者点
-    cat  ${stringarray[0]} | sed -r "s#\]\((\w*)([ /.]+)#\]\(\.\.\/${context[1]}\/\1\2#g" >  "${stringarray[1]}" 
+    #cat  ${stringarray[0]} | sed -r "s#\]\((\w*)([ /.]+)#\]\(\.\.\/${context[0]}\/\1\2#g" >  "${stringarray[1]}"
+
 done < readme_list.txt
 
 ## 将 markdown 文件 转换成 html 文件
-find ./ -iname "*.md" -type f -exec sh -c 'pandoc "${0}"  -s  --from markdown --to html5 -o "${0%.md}.html"' {} \; 
+find ${xy2401_local_local_root} -iname "*.md" -type f -exec sh -c 'pandoc "${0}"  -s  --from markdown --to html5 -o "${0%.md}.html"' {} \; 
  
 ##将由其他目录拷贝过来的 md 文件 超链接 替换为本地的html 
 while read line
@@ -43,11 +50,11 @@ do
     [[ -z "${line// }" ]] && continue 
     #echo $line
     stringarray=( $line )
-    sed -i "s#${stringarray[0]}#${stringarray[1]%.md}.html#g"  *.html
+    sed -i "s#${stringarray[0]}#${stringarray[1]%.md}.html#g"  ${xy2401_local_local_root}/*.html
 done < readme_list.txt
 
 #href="status.md"
-sed -i -r  "s#href=\"(\w*)\.md\"#href=\"\1.html\"#g" *.html
+sed -i -r  "s#href=\"(\w*)\.md\"#href=\"\1.html\"#g" ${xy2401_local_local_root}/*.html
 
 
 ##创建独立域名的端口配置ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
