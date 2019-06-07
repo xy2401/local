@@ -55,6 +55,10 @@ done < readme_list.txt
 #href="status.md"
 sed -i -r  "s#href=\"(\w*)\.md\"#href=\"\1.html\"#g" ${xy2401_local_local_root}/*.html
  
+#清空文件 
+> default-nginx.conf.target
+> default-apache.conf.target   
+
 ##创建独立域名的端口配置ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
 while read line
 do 
@@ -72,7 +76,7 @@ do
    # 如果有原始域名 则替换为本地地址
    #sub_filter '#sub_filter_string' '#sub_filter_replacement';##文本替换
     if [[  ${stringarray[3]} =~ [^[:space:]] ]] ; then
-       echo "|${stringarray[3]}|"
+       
        sed -i "s#\#sub_filter_replacement#http://${xy2401_local_ip}:${stringarray[1]}#g" default-nginx.conf.tmp ;
        sed -i "s#\#sub_filter_string#${stringarray[3]}#g" default-nginx.conf.tmp  ;
        sed -i "s#\#sub_filter#sub_filter#g" default-nginx.conf.tmp   ;
