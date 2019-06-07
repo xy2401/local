@@ -22,7 +22,7 @@
 - `本地软件推荐`[local-software/README.md](../local-software/README.md)
 - `本地电子书`[local-doc-books/README.md](../local-doc-books/README.md)
 - `本地镜像`[local-mirror/README.md](../local-mirror/README.md)
-    - `apache镜像`[local-mirror/apache.md](../local-mirror/apache.mdd)
+    - `apache镜像`[local-mirror/apache.md](../local-mirror/apache.md)
 
  
 

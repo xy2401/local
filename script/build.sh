@@ -73,13 +73,18 @@ do
    ## 拷贝文件 方便直接 修改临时文件
    cp default-nginx.conf default-nginx.conf.tmp 
    cp default-apache.conf default-apache.conf.tmp 
-   # 如果有原始域名 则替换为本地地址
+   # 如果有原始域名 则替换为 本地地址
    #sub_filter '#sub_filter_string' '#sub_filter_replacement';##文本替换
     if [[  ${stringarray[3]} =~ [^[:space:]] ]] ; then
        
-       sed -i "s#\#sub_filter_replacement#http://${xy2401_local_ip}:${stringarray[1]}#g" default-nginx.conf.tmp ;
-       sed -i "s#\#sub_filter_string#${stringarray[3]}#g" default-nginx.conf.tmp  ;
-       sed -i "s#\#sub_filter#sub_filter#g" default-nginx.conf.tmp   ;
+       #nginx
+       sed -i "s#\#sub_filter_replacement#http://${xy2401_local_ip}:${stringarray[1]}#g" default-nginx.conf.tmp default-apache.conf.tmp   
+       sed -i "s#\#sub_filter_string#${stringarray[3]}#g" default-nginx.conf.tmp   default-apache.conf.tmp
+       sed -i "s#\#sub_filter#sub_filter#g" default-nginx.conf.tmp # nginx 解开注释 
+       sed -i "s#\#Substitute#Substitute#g" default-apache.conf.tmp # apache 解开注释 #Substitute  
+       sed -i "s#\#AddOutputFilterByType#AddOutputFilterByType#g" default-apache.conf.tmp #AddOutputFilterByType
+
+
     fi
     
     #如果目录中存在 .htaccess 文件 则 启动 htaccess 配置
