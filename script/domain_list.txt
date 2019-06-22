@@ -1,6 +1,6 @@
 # #号开头为注释  文件路径 端口 替换url 原始域名(替换)
 
-./ 2401 https://xy2401.com/local/
+. 2401 https://xy2401.com/local/
 
 local-doc-help-jetbrains.com 2402 https://help-jetbrains.xy2401.com
 
@@ -34,6 +34,6 @@ local-mirror/mirror/apache-websites2/beam 2700 https://svn.apache.org/repos/asf/
 local-mirror/mirror/apache-websites2/httpcomponents 2702 https://svn.apache.org/repos/asf/httpcomponents
 local-mirror/mirror/apache-websites2/jmeter 2703 https://svn.apache.org/repos/asf/jmeter
 local-mirror/mirror/apache-websites2/poi 2704 https://svn.apache.org/repos/asf/poi
-
+local-mirror/mirror/apache-websites2/tomcat 2705 https://svn.apache.org/repos/asf/tomcat/site/trunk/docs/
  
 

@@ -86,21 +86,7 @@ do
 
 
     fi
-    
-    #如果目录中存在 .htaccess 文件 则 启动 htaccess 配置
-    #echo "${xy2401_local_root}/${stringarray[0]}/.htaccess"
-    #if [ -f "${xy2401_local_root}/${stringarray[0]}/.htaccess" ]; then
-    #   sed -i "s#\.htacces#${xy2401_local_root}/${stringarray[0]}/.htaccess#g" default-nginx.conf.tmp  ;
-    #   sed -i "s#\#include#include#g" default-nginx.conf.tmp   ;
-    #fi
-
-    #添加防火墙
-    #semanage port -a -t http_port_t -p tcp ${stringarray[1]}
-    #semanage port -m -t http_port_t -p tcp ${stringarray[1]}
-    #firewall-cmd --permanent --add-port=${stringarray[1]}/tcp
-
-
-
+      
     cat default-nginx.conf.tmp | \
     sed  "s#xy2401_local_server_listen#${stringarray[1]}#g" | \
     sed  "s#xy2401_local_server_root#${xy2401_local_root}/${stringarray[0]}/#g" \
@@ -120,20 +106,13 @@ done < domain_list.txt
 #删除临时文件
 rm default-nginx.conf.tmp 
 rm default-apache.conf.tmp 
-  
-
- ##重启防火墙 
- #firewall-cmd --reload
- 
+    
 #cp default-nginx.conf.target /etc/nginx/local.conf
 ## 停止并且启动 没有启动的时候不能 reload 
 #nginx -s stop
 #nginx
 #command -v nginx > /dev/null && echo nginx  -s stop && nginx 
-
-
-
-
+  
 ## apache 配置
 ## Ubuntu
 [[ -d "/etc/apache2/sites-enabled/" ]] && cp default-apache.conf.target /etc/apache2/sites-enabled/local.conf
