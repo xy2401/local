@@ -54,7 +54,7 @@ done < readme_list.txt
  
 #href="status.md"
 sed -i -r  "s#href=\"(\w*)\.md\"#href=\"\1.html\"#g" ${xy2401_local_local_root}/*.html
- 
+  
 #清空文件 
 > default-nginx.conf.target
 > default-apache.conf.target   
@@ -115,14 +115,14 @@ rm default-apache.conf.tmp
   
 ## apache 配置
 ## Ubuntu
-[[ -d "/etc/apache2/sites-enabled/" ]] && cp default-apache.conf.target /etc/apache2/sites-enabled/local.conf
+#[[ -d "/etc/apache2/sites-enabled/" ]] && cp default-apache.conf.target /etc/apache2/sites-enabled/local.conf
 ## fedora
-[[ -d "/etc/httpd/conf.d" ]] && cp default-apache.conf.target /etc/httpd/conf.d/local.conf
+#[[ -d "/etc/httpd/conf.d" ]] && cp default-apache.conf.target /etc/httpd/conf.d/local.conf
 
 #apachectl stop
 #apachectl start
 #判断命令是否存在 并执行
-command -v apachectl > /dev/null &&  apachectl stop && apachectl start
+#command -v apachectl > /dev/null &&  apachectl stop && apachectl start
 
 
  

@@ -13,3 +13,8 @@ local-mirror/README.md mirror.md
 
 
 local-web-util/README.md web-util.md
+local-web-util/draft.md web-util-draft.md
+local-web-util/lib.md web-util-lib.md
+
+local-youtube-vtt/README.md youtube.md
+
