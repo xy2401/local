@@ -22,7 +22,7 @@
 [中文](https://jetbrains.com.zh.xy2401.com/) , 
 [本地](https://jetbrains.com.xy2401.com/) , 
 [官网](https://www.jetbrains.com/) , 
-`https://www.jetbrains.com`
+`www.jetbrains.com`
 
 
 [中文](https://docs.docker.com.zh.xy2401.com/) , 
