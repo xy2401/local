@@ -18,6 +18,9 @@
 [官网](https://www.iata.org) , 
 `www.iata.org`
 
+[中文](../local-site-201911-iata.org.pdf.zh/README.md) , 
+[本地](../local-site-201911-iata.org.pdf/README.md) , 
+`www.iata.org pdf`
 
 [中文](https://jetbrains.com.zh.xy2401.com/) , 
 [本地](https://jetbrains.com.xy2401.com/) , 
@@ -41,7 +44,7 @@
 [8](../local-doc-java-api/8/api/) , 
 [11](../local-doc-java-api/11/api/) , 
 
-Oracle 
+**Oracle Database** 
 [19c 中](../local-doc-oracle-19c.zh/Readme.html) , 
 [19c](../local-doc-oracle-19c/Readme.html) , 
 [18c](../local-doc-oracle-18c/Readme.html) , 
